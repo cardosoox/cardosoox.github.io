@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #1c1d1f, #080124);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Garante que o conteúdo comece no topo */
+    overflow: hidden; /* Impede o scroll causado pelas bolhas */
+}
+
+.hero {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.navbar {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    background-color: #4e7481;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px; /* Garante distância do topo */
+}
+
+.portfolio-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 350px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project img {
+    width: 90%;
+    max-height: 140px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.project p {
+    font-size: 0.85rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.project button {
+    font-size: 0.85rem;
+    padding: 8px 20px;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.bubbles img {
+    width: 40px;
+    animation: bubble 7s linear infinite;
+}
+
+.bubbles {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -50px; /* Ajustado para nascer abaixo do viewport */
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(20vh); /* Começa mais abaixo do que a tela visível */
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-80vh); /* Termina saindo do topo */
+        opacity: 0;
+    }
+}
+
+.bubbles img:nth-child(1) {
+    animation-delay: 2s;
+    width: 25px;
+}
+.bubbles img:nth-child(2) {
+    animation-delay: 1s;
+}
+.bubbles img:nth-child(3) {
+    animation-delay: 3s;
+    width: 25px;
+}
+.bubbles img:nth-child(4) {
+    animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5) {
+    animation-delay: 3s;
+}
+.bubbles img:nth-child(6) {
+    animation-delay: 6s;
+    width: 20px;
+}
+.bubbles img:nth-child(7) {
+    animation-delay: 7s;
+    width: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .portfolio-container h1 {
+        font-size: 2rem;
+    }
+
+    .portfolio-container p {
+        font-size: 0.9rem;
+    }
+
+    .projects {
+        display: flex; /* Manter os itens lado a lado */
+        flex-wrap: wrap; /* Permitir que os itens se movam para a linha seguinte se necessário */
+        justify-content: center; /* Alinhar os itens ao centro */
+        gap: 15px; /* Espaço entre os projetos */
+    }
+
+    .project {
+        width: 25%; /* Ajuste a largura para que dois projetos caibam lado a lado */
+        padding: 10px;
+        box-sizing: border-box; /* Certifique-se de que o padding não afete a largura */
+    }
+
+    .project img {
+        max-height: 100px;
+    }
+
+    button {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+    }
+
+    /* Navbar ajuste adicional para telas muito pequenas */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%; /* Certifique-se de que a navbar ocupe toda a largura */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-container p {
+        font-size: 0.8rem;
+    }
+
+    .projects {
+        display: flex; /* Manter os itens lado a lado */
+        flex-wrap: wrap; /* Permitir que os itens se movam para a linha seguinte */
+        justify-content: center; /* Alinhar os itens ao centro */
+        gap: 10px; /* Reduzir o espaço entre os projetos */
+    }
+
+    .project {
+        width: 100%; /* Cada projeto vai ocupar 100% da largura disponível */
+        padding: 10px;
+        box-sizing: border-box; /* Garantir que o padding não afete a largura */
+    }
+
+    .project img {
+        max-height: 50px; /* Reduzir a altura da imagem */
+        width: auto; /* Garantir que a imagem se ajuste proporcionalmente */
+    }
+
+    .logo {
+        width: 70px; /* Ajustar o tamanho do logo na navbar */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Garantir que a navbar ocupe toda a largura */
+    }
+
+    /* Remover scroll indesejado */
+    body {
+        overflow-x: hidden; /* Evita o scroll horizontal */
+    }
+}

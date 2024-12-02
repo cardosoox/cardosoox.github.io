@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cardosoox's Spot</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div class="hero">
+            <div class="navbar">
+                <img src="images/cardosooxlogo.png" class="logo">
+                <div class="nav-buttons">
+                    <a href="portfolio.html">
+                        <button type="button">Portfólio</button>
+                    </a>
+                    <a href="signuplog.html">
+                        <button type="button">Sign Up</button>
+                    </a>
+                </div>
+            </div>
+            <div class="content">
+                <small>Bem Vindo ao</small>
+                <h1> Spot do Cardoso</h1>
+                <a href="https://bit.ly/givewaycardosoox">
+                    <button type="button"> Giveway Cardosoox!</button>
+                </a>
+            </div>
+            <div class="side-bar">
+                
+
+                <div class="social-links">
+                        <img src="images/fb.png">
+                        <img src="images/ig.png">
+                        <img src="images/tw.png">
+                </div>
+
+                <div class="useful-links">
+                    <img src="images/share.png">
+                    <img src="images/info.png">
+                    
+                </div>
+
+            </div>
+            <div class="bubbles">
+                <img src="images/bubble.png">
+                <img src="images/bubble.png">
+                <img src="images/bubble.png">
+                <img src="images/bubble.png">
+                <img src="images/bubble.png">
+                <img src="images/bubble.png">
+                <img src="images/bubble.png">
+            </div>
+        </div>
+
+
+    </body>
+</html>
